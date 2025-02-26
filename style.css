@@ -16,37 +16,99 @@ body{
 .container{
     display: grid;
     grid-gap: 20px;
-    padding-left: clamp(10px,(100vw - 380px) * 0.5,220px );
-    padding-right: clamp(10px,(100vw - 380px) * 0.5,220px );
+    padding-left: clamp(10px,5px,100px);
+    padding-right: clamp(10px,5px,100px);
     padding-top: 20px;
-
+    width: 100%;
+    position: relative;
     }
 .navbar{
-    display: flex;
-    position:sticky;
+    position: sticky;
     top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
+    align-items:flex-start;
     z-index: 1000;
-        align-items: center;
-        background-color: rgb(45, 43, 43);
-        backdrop-filter: blur(50px);
-        background: rgba(255, 255, 255, 0.05); 
-        backdrop-filter: blur(10px); 
-        -webkit-backdrop-filter: blur(15px); 
-        border-radius: 15px; 
-        border: 1px solid rgba(255, 255, 255, 0.2); 
-        padding: 10px;
-        text-align: center;
-        color: white;
-        height: clamp(50px,10dvh,150px);
-        justify-content: space-between;
+    background-color: rgb(45, 43, 43);
+    backdrop-filter: blur(50px);
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(15px); 
+    border-radius: 15px; 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    padding: 10px;
+    color: white;
+    height: clamp(50px,10dvh,150px);
+    gap: 30px;
     }
+    .menu{
+        display: none;
+    }
+    .menu.show{
+    transform: translateY(200px);
+    background-color: rgb(45, 43, 43);
+    backdrop-filter: blur(50px);
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(15px); 
+    border-radius: 15px; 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    padding: 10px;
+    position: fixed;
+    top: 130px;
+    z-index: 900;
+    padding-left: clamp(10px,5dvw,100px);
+    padding-right: clamp(10px,5dvw,100px);
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+    height: 50dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    justify-self: center;
+    gap: 15px;
+    text-align: start;
+    animation: fade-in .5s  ease forwards;
+    }
+
+.menu > a > button{
+    background: none;
+    border: none;
+    color: #cfc9c9;
+    font-size:clamp(.5rem,3dvh,1.5rem);
+    cursor: pointer;
+    padding: 10px;
+    width: fit-content;
+}
+.menu > a > button:hover{
+    background-color: rgb(197, 197, 197);
+    backdrop-filter: blur(50px);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.187), rgba(233, 230, 230, 0.007), rgba(255, 255, 255, 0.169));
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(15px); 
+    border-radius: 20px; 
+    border: 1px solid rgba(197, 197, 197, 0.705);
+}
+.logo-nav{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    color: white;
+    height: 80%;
+    justify-content: space-between;
+}
 .logo{
     display: flex;
     align-items: center;
     height: 80%;
-    width: clamp(70px,10dvw,80px);
+    width: clamp(40px,10dvw,80px);
     gap: 5px;
-}
+}   
 .logo > img{
     width: 100%;
     height: 100%;
@@ -55,22 +117,33 @@ body{
 .logo > h1{
     font-size: clamp(1rem,3dvh,3rem);
 }
-.navbar .hamburger{
+.hamburger {
     display: flex;
     flex-direction: column;
     justify-self: flex-end;
     gap: 8px;
     align-items: center;
-    
-
+    cursor: pointer;
 }
 .hamburger .line{
     background-color: white;
     height: 1px;
-    width: 23px;
+    width:24px;
+}
+.hamburger.active{
+    animation: rotation 1s ease forwards;
+}
+.hamburger.active .top{
+    animation: topline 1s  ease forwards;
+}
+.hamburger.active .mid{
+    animation: midline  ease forwards;
+}
+.hamburger.active .bot{
+    animation: bottomline 1s  ease forwards;
 }
 .about{
-    background-color: rgb(45, 43, 43);
+        background-color: rgb(45, 43, 43);
         backdrop-filter: blur(50px);
         background: rgba(255, 255, 255, 0.05); 
         backdrop-filter: blur(10px); 
@@ -80,6 +153,8 @@ body{
         padding: 10px;
         text-align: center;
         color: white;
+        position: relative;
+        z-index: 1;
 }
 .info{
     display: flex;
@@ -168,6 +243,7 @@ body{
         gap: 10px;
         height: 100%;
         transition: box-shadow .2s ease-in-out;
+
 }
 .icon:hover{
     box-shadow: .1px .2px 5px #b07246 ;
@@ -247,7 +323,7 @@ mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 5%, black 25%, black 75%,
     text-wrap: nowrap;  
 }
 .testimonials-wrapper{
-    background-color: rgb(45, 43, 43);
+        background-color: rgb(45, 43, 43);
         backdrop-filter: blur(50px);
         background: rgba(255, 255, 255, 0); 
         backdrop-filter: blur(10px); 
@@ -264,7 +340,6 @@ mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 5%, black 25%, black 75%,
     flex-direction: column;
     gap: 20px;
     width: 100%;
-    
 }
 .test-content > p{
     text-align: left;
@@ -434,5 +509,46 @@ footer p{
     }
     to {
         transform: translateX(-50%);
+    }
+}
+@keyframes fade-in {
+    0%{
+        transform: translateY(-200px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+    
+}
+@keyframes topline {
+    0%{
+        transform: none;
+    }
+    100%{
+        transform: translateY(9px) rotate(45deg);
+    }
+}
+@keyframes midline {
+    0%{
+        scale: 1;
+    }
+    100%{
+        scale: 0;
+    }
+}
+@keyframes rotation {
+    0%{
+        transform: none;
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}
+@keyframes bottomline {
+    0%{
+        transform: none;
+    }
+    100%{
+        transform: translateY(-9px) rotate(-45deg);
     }
 }
