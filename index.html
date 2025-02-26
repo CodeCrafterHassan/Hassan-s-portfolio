@@ -9,18 +9,25 @@
 </head>
 <body>
     <div class="container">
-    <div class="navbar">
-        <div class="logo">
-        <img src="logo.png" alt="">
-        <h1>Hassan</h1>
-        
+        <div class="navbar">
+            <div class="logo-nav">
+                <div class="logo">
+                    <img src="logo.png" alt="">
+                    <h1>Hassan</h1>
+                    </div>
+                    <div class="hamburger active">
+                        <div class="top line active"></div>
+                        <div class="mid line active"></div>
+                        <div class="bot line active"></div>
+                    </div>
+            </div>
         </div>
-        <div class="hamburger">
-            <div class="top line"></div>
-            <div class="mid line"></div>
-            <div class="bot line"></div>
+        <div class="menu show">
+            <a href="index.html"><button>Home</button></a>
+            <a><button>About</button></a>
+            <a><button>Services</button></a>
+            <a><button>Contact</button></a>
         </div>
-    </div>
     <div class="about">
         <div class="info">
             <img src="hassan.png" alt="">
@@ -172,7 +179,7 @@
     <div class="projects-wrapper">
         <h1>Projects</h1>
         <div class="projects-info">
-            <h4>Currently doing an internship at <a href="https://drupak.com/">Drupak</a>. where I have built multiple practice projects, improving my skills in web development, Drupal, and UI design. Constantly experimenting with new technologies to create modern and responsive websites.
+            <h4>Currently doing an internship at <a href="https://drupak.com/">Drupak</a>, where I have built multiple practice projects, improving my skills in web development, Drupal, and UI design. Constantly experimenting with new technologies to create modern and responsive websites.
             </h4>
         </div>
     </div>
@@ -218,5 +225,21 @@
     </div>
     <P>&copy;  2025 Hassan. All rights reserved</P>
 </footer>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const menu = document.querySelector(".menu");
+
+    // Ensure hamburger starts in normal state (in case of cached styles)
+    hamburger.classList.remove("active");
+    menu.classList.remove("show");
+
+    hamburger.addEventListener("click", function () {
+        this.classList.toggle("active");
+        menu.classList.toggle("show");
+    });
+});
+
+</script>
 </body>
 </html>
