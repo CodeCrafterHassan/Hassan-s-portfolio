@@ -7,33 +7,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo-nav">
-            <div class="logo">
-                <img src="logo.png" alt="">
-                <h1>Hassan</h1>
-                </div>
-                <div class="hamburger active">
-                    <div class="top line active"></div>
-                    <div class="mid line active"></div>
-                    <div class="bot line active"></div>
-                </div>
-        </div>
+<header> <div class="navbar">
+    <div class="logo-nav">
+        <div class="logo">
+            <img src="logo.png" alt="">
+            <h1>Hassan</h1>
+            </div>
+            <div class="hamburger active">
+                <div class="top line active"></div>
+                <div class="mid line active"></div>
+                <div class="bot line active"></div>
+            </div>
     </div>
+</div></header>
     <div class="container">
         
         <div class="menu show">
             <a href="index.html"><button>Home</button></a>
             <a><button>About</button></a>
-            <a><button>Services</button></a>
-            <a><button>Contact</button></a>
+            <a href="projects.html"><button>Projects
+            </button></a>
+            <a href="contacts.html"><button>Contact</button></a>
         </div>
     <div class="about">
         <div class="info">
             <img src="hassan.png" alt="">
             <h1>Hassan Ahmad</h1>
             <h4>I’m a passionate web developer who loves crafting interactive and visually stunning experiences with HTML, CSS, and JavaScript. I turn ideas into sleek, responsive designs with a touch of creativity!</h4>
-            <button>Let's Connect</button>
+            <a href="contacts.html"><button>Let's Connect</button></a>
+            <a href="https://wa.me/message/ADNZ6PRDJAKYD1" ><button>Chat on WhatsApp</button></a>
+            
         </div>
     </div>
     <div class="skills">
@@ -186,7 +189,7 @@
     <div class="connect">
         <h2>Lets work together</h2>
         <div class="button">
-            <a href=""><h3>Lets talk &#8594; </h3></a>
+            <a href="contacts.html"><h3>Lets talk &#8594; </h3></a>
         </div>
     </div>
     <div class="social">
@@ -210,7 +213,7 @@
         </div></a>
         <a href="mailto:webcodecrafter1@gmail.com" style="text-decoration: none;"><div class="social-icon">
             <h3>Mail</h3>
-            <div class="social-icon-image">
+            <div class="social-icon-image ">
                 <img src="envelope.png" alt="">
             </div>
         </div></a>
@@ -230,7 +233,6 @@
     const hamburger = document.querySelector(".hamburger");
     const menu = document.querySelector(".menu");
 
-    // Ensure hamburger starts in normal state (in case of cached styles)
     hamburger.classList.remove("active");
     menu.classList.remove("show");
 
