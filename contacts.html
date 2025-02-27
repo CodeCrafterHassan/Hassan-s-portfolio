@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hassan's portfolio</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .lets-connect{
+        background-color: rgb(45, 43, 43);
+        backdrop-filter: blur(50px);
+        background: rgba(255, 255, 255, 0.05); 
+        backdrop-filter: blur(10px); 
+        -webkit-backdrop-filter: blur(15px); 
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: start;
+        padding: 20px;
+        gap: 20px;
+}
+.lets-connect > h2{
+    font-weight: 400;
+}
+.info-connect{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.location{
+    display: flex;
+    gap: 5px;
+}
+.location > h3{
+    font-weight: 200;
+}
+.phone{
+    display: flex;
+    gap: 5px;
+}
+.phone > h3 {
+    font-weight: 300;
+    text-wrap: nowrap;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-items:center ;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    gap: 20px;
+}
+.name{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.name > input {
+    background-color: rgb(45, 43, 43);
+    backdrop-filter: blur(50px);
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(15px); 
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    width: 100%;
+    color: white;
+}
+.name > textarea{
+    background-color: rgb(45, 43, 43);
+    backdrop-filter: blur(50px);
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(15px); 
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    width: 100%;
+    color: white;
+    min-height: 40%;
+}
+form >a >button{
+    backdrop-filter: blur(50px);
+    background: #5b3b2539; 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(15px); 
+    border-radius: 10px; 
+    border: 1px solid #784c2c4d; 
+    color: #FF8833;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+    padding: 10px;
+}
+form > a >button:hover{
+    box-shadow: 1px 1px 10px #FF8833 ;
+}
+@media screen and (min-width:768px){
+.container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+}
+@media screen and (min-width:1024px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 2fr ;
+    }
+}
+
+</style>
+</head>
+<body>
+    <header> <div class="navbar">
+        <div class="logo-nav">
+            <div class="logo">
+                <img src="logo.png" alt="">
+                <h1>Hassan</h1>
+                </div>
+                <div class="hamburger active">
+                    <div class="top line active"></div>
+                    <div class="mid line active"></div>
+                    <div class="bot line active"></div>
+                </div>
+        </div>
+    </div></header>
+    <div class="container">
+        <div class="menu show">
+            <a href="index.html"><button>Home</button></a>
+            <a><button>About</button></a>
+            <a href="projects.html"><button>Projects</button></a>
+            <a href="contacts.html"><button>Contact</button></a>
+        </div>
+        <div class="about">
+            <div class="info">
+                <img src="hassan.png" alt="">
+                <h1>Hassan Ahmad</h1>
+                <h4>I’m a passionate web developer who loves crafting interactive and visually stunning experiences with HTML, CSS, and JavaScript. I turn ideas into sleek, responsive designs with a touch of creativity!</h4>
+            <a href="contacts.html"><button>Let's Connect</button></a>
+            <a href="https://wa.me/message/ADNZ6PRDJAKYD1" ><button>Chat on WhatsApp</button></a>
+            </div>
+        </div>
+        <div class="lets-connect">
+            <h2>Let's Work Together </h1>
+            <div class="info-connect">
+                <div class="location">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C8.13 2 5 5.13 5 9C5 13.25 9.5 19.5 11.18 21.5C11.59 22 12.41 22 12.82 21.5C14.5 19.5 19 13.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="white"/>
+                    </svg>
+                    <h3>New City Block L, Wah, Punjab, Pakistan</h3>
+                </div>
+            <div class="phone">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M19.5 15.5l-2.8-.4c-.4-.1-.8.1-1 .4l-1.4 1.4c-2.5-1.3-4.7-3.5-6-6l1.4-1.4c.3-.3.5-.7.4-1l-.4-2.8c-.1-.5-.5-.9-1-.9H6c-.6 0-1 .4-1 1C5 13 11 19 18 19c.6 0 1-.4 1-1v-1.6c0-.5-.4-.9-.9-1z"/>
+                </svg>
+                <h3>0334-5890559</h3>
+            </div>
+            </div>
+    
+        <form action="https://formsubmit.co/webcodecrafter1@gmail.com" method="POST">
+            <div class="name">
+                <input type="text" name="name" placeholder="Your Name" required >
+                <input type="mail" name="mail" placeholder="Yourname@example.com" required >
+                <textarea type="text" name="text" placeholder="Your Message" required></textarea>
+            </div>
+            <a><button type="submit">Send Message</button></a>
+        </form>
+    
+        </div>
+        <div class="social">
+            <a  href="https://www.linkedin.com/in/hassan-ahmad-9a132b351/?trk=public-profile-badge-profile-badge-view-profile-cta&original_referer=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2F&originalSubdomain=pk" style="text-decoration: none;" ><div class="social-icon">
+                <h3>Linkedin</h3>
+                <div class="social-icon-image">
+                    <img src="linkedin-logo.png" alt="">
+                </div>
+            </div></a>
+                <a href="https://www.instagram.com/hassanahmad132005?igsh=YTB2d2FheXpuMG1v&utm_source=qr" style="text-decoration: none;"><div class="social-icon">
+                    <h3>Instagram</h3>
+                    <div class="social-icon-image">
+                        <img src="instagram-logo.png" alt="">
+                    </div>
+                </div></a>
+                <a href="https://www.youtube.com/@Animatecode_with_Hassan" style="text-decoration: none;"><div class="social-icon">
+                    <h3>Youtube</h3>
+                    <div class="social-icon-image">
+                        <img src="youtube-logo.png" alt="">
+                    </div>
+                </div></a>
+                <a href="mailto:webcodecrafter1@gmail.com" style="text-decoration: none;"><div class="social-icon">
+                    <h3>Mail</h3>
+                    <div class="social-icon-image">
+                        <img src="envelope.png" alt="">
+                    </div>
+                </div></a>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-logo">
+        <div class="footer-logo-img">
+            <img src="logo.png" alt="">
+        </div>
+        <h3>Hassan</h3>
+        </div>
+        <P>&copy;  2025 Hassan. All rights reserved</P>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger");
+        const menu = document.querySelector(".menu");
+    
+        hamburger.classList.remove("active");
+        menu.classList.remove("show");
+    
+        hamburger.addEventListener("click", function () {
+            this.classList.toggle("active");
+            menu.classList.toggle("show");
+        });
+    });
+    
+    </script>
+</body>
+</html>
