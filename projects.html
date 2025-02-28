@@ -20,7 +20,9 @@
             text-wrap: nowrap;
             font-weight: 900;
             color: white;
+            gap: 10px;
         }
+        
 
         .soon span {
             opacity: 0;
@@ -37,6 +39,8 @@
             .soon{
                 font-size: 2rem;
                 font-weight: 800;
+                display: flex;
+                flex-direction: column;
             }
             
         }
@@ -44,7 +48,8 @@
             .soon{
                 font-size: 1rem;
                 font-weight: 500;
-                text-wrap:nowrap;
+                display: flex;
+                flex-direction: column;
             }
         }
 </style>
@@ -71,9 +76,11 @@
             <a href="contacts.html"><button>Contact</button></a>
         </div>
         <div class="soon">
-            <h1>
-                <span style="color: #FF8833;">C</span><span style="color: #FF8833;">O</span><span>M</span><span>I</span><span>N</span><span>G</span><span>&nbsp;</span><span>S</span><span>O</span><span style="color:  #FF8833;">O</span><span style="color:  #FF8833;">N</span>           
-            </h1>
+            
+                <div class="div1"><h1><span style="color: #FF8833;">C</span><span style="color: #FF8833;">O</span><span>M</span><span>I</span><span>N</span><span>G</span></h1></div>
+                <span>&nbsp;</span>
+                <div class="div2"><h1><span>S</span><span>O</span><span style="color:  #FF8833;">O</span><span style="color:  #FF8833;">N</span></h1></div>
+            
         </div>
     
     </div>
