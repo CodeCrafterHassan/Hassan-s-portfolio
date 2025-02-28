@@ -103,11 +103,17 @@ form >a >button{
 form > a >button:hover{
     box-shadow: 1px 1px 10px #FF8833 ;
 }
+.soon{
+    display: none;
+}
 @media screen and (min-width:768px){
 .container{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
+    }
+    .soon{
+        display: none;
     }
 }
 @media screen and (min-width:1024px){
@@ -115,6 +121,29 @@ form > a >button:hover{
         display: grid;
         grid-template-columns: 1fr 2fr ;
     }
+    .soon {
+            display:grid;
+            justify-content: center;
+            align-items:center ;
+            grid-column:2 / 4 ;
+            grid-row: 2 /4;
+            font-size:3rem;
+            text-wrap: nowrap;
+            font-weight: 900;
+            color: white;
+            gap: 10px;
+        }
+        .soon span {
+            opacity: 0;
+            transform: translateY(30px);
+            display: inline-block;
+            transition: opacity 0.5s ease-out, transform 0.3s ease-out;
+        }
+
+        .soon span.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
 }
 
 </style>
@@ -136,7 +165,7 @@ form > a >button:hover{
     <div class="container">
         <div class="menu show">
             <a href="index.html"><button>Home</button></a>
-            <a><button>About</button></a>
+            <a href="about.html"><button>About</button></a>
             <a href="projects.html"><button>Projects</button></a>
             <a href="contacts.html"><button>Contact</button></a>
         </div>
@@ -174,8 +203,10 @@ form > a >button:hover{
             </div>
             <a><button type="submit">Send Message</button></a>
         </form>
-    
         </div>
+        <div class="soon">
+            <div class="div1"><h1><span style="color: #FF8833;">H</span><span style="color: #FF8833;">A</span><span>S</span><span>S</span><span style="color: #FF8833;">A</span><span style="color: #FF8833;">N</span></h1></div>
+    </div>
         <div class="social">
             <a  href="https://www.linkedin.com/in/hassan-ahmad-9a132b351/?trk=public-profile-badge-profile-badge-view-profile-cta&original_referer=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2F&originalSubdomain=pk" style="text-decoration: none;" ><div class="social-icon">
                 <h3>Linkedin</h3>
@@ -226,6 +257,13 @@ form > a >button:hover{
             menu.classList.toggle("show");
         });
     });
+    const letters = document.querySelectorAll(".soon span");
+            letters.forEach((letter, index) => {
+                setTimeout(() => {
+                    letter.classList.add("show");
+                }, index * 200); 
+            });
+        
     
     </script>
 </body>
