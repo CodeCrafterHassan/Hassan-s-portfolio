@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hassan's portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<style>
+.experience{
+        background-color: rgb(45, 43, 43);
+        backdrop-filter: blur(50px);
+        background: rgba(255, 255, 255, 0.05); 
+        backdrop-filter: blur(10px); 
+        -webkit-backdrop-filter: blur(15px); 
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+}
+
+.drupak > h3{
+    color: rgba(244, 142, 46, 0.986);
+}
+span > p{
+    padding-top: 10px;
+    font-size: medium;
+    font-weight: 400;
+    padding-left: 20px;
+    color: rgba(255, 255, 255, 0.905);
+}
+ul{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    color: #aca5a5;
+}
+.services{
+        background-color: rgb(45, 43, 43);
+        backdrop-filter: blur(50px);
+        background: rgba(255, 255, 255, 0.05); 
+        backdrop-filter: blur(10px); 
+        -webkit-backdrop-filter: blur(15px); 
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+}
+.services-icons{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+}
+.devolopment{
+    background-color: rgb(56, 56, 56);
+    backdrop-filter: blur(50px);
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(15px); 
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    display: grid; 
+    grid-column: 1 / 2;
+    justify-items: center;
+    grid-gap: 10px;
+    color: #d4d4d4ec;
+    transition: all .2s ease-in;
+    height: 120px;
+}
+.devolopment:hover{
+    box-shadow: .1px .2px 5px #ffffff81; 
+    background: #ffffff13;
+    color: white;
+    cursor: pointer;
+}
+.devolopment > svg path{
+    fill: white ;
+    transition: all .2s ease-in;
+}
+.devolopment:hover > svg path{
+    fill: #FF8833;
+}
+@media screen and (min-width:768px) {
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .about{
+        grid-column: 1 / 3;
+    }
+    .experience{
+        grid-column: 1 /3;
+    }
+    .services{
+        grid-column:1 / 3;
+    }
+    .connect{
+        grid-column:1 / 3 ;
+    }
+}
+@media screen and (min-width:1024px) {
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .about{
+        grid-column:1 / 3;
+    }
+    .experience{
+        grid-column:3 / 4;
+    }
+    .services{
+        grid-column: auto;
+        grid-row: 2 / 4;
+        
+    }
+    .services-icons{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column: 1fr 1fr 1fr;
+    }
+    .A{
+        grid-column:1 / 2;
+        grid-row: 1 / 2;
+    }
+    .B{
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    .C{
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+    .D{
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+    .E{
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+    .F{
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+    }
+    .devolopment{
+        height: 150px;
+        text-wrap: nowrap;
+    }
+    .connect{
+        width: 100%;
+    }
+}
+
+
+</style>
+<body>
+    <header> <div class="navbar">
+        <div class="logo-nav">
+            <div class="logo">
+                <img src="logo.png" alt="">
+                <h1>Hassan</h1>
+                </div>
+                <div class="hamburger active">
+                    <div class="top line active"></div>
+                    <div class="mid line active"></div>
+                    <div class="bot line active"></div>
+                </div>
+        </div>
+    </div></header>
+    <div class="container">
+        <div class="menu show">
+            <a href="index.html"><button>Home</button></a>
+            <a href="about.html"><button>About</button></a>
+            <a href="projects.html"><button>Projects
+            </button></a>
+            <a href="contacts.html"><button>Contact</button></a>
+        </div>
+        <div class="about">
+            <div class="info">
+                <img src="image2.png" alt="">
+                <h4>Hey! I’m Hassan, a passionate web developer who loves crafting interactive and visually stunning experiences with HTML, CSS, and JavaScript. I specialize in creating sleek, responsive, and engaging designs with a touch of creativity. Always exploring new technologies, I strive to blend functionality with aesthetics to bring ideas to life!</h4>
+                <a href="contacts.html"><button>Let's Connect</button></a>
+                <a href="https://wa.me/message/ADNZ6PRDJAKYD1" ><button>Chat on WhatsApp</button></a>
+                
+            </div>
+        
+    </div>
+    <div class="experience">
+        <h1>EXPERIENCE</h1>
+        <div class="drupak">
+            
+            <h3>&#9679; Intern Web Developer &nbsp;&nbsp;&nbsp;&nbsp; <span><p>[ Drupak | 2025 present ]</p></span> </h3>
+            <ul>
+                <li>Developing responsive websites using HTML, CSS, JavaScript, and Tailwind CSS.</li>
+                <li>Working on animations and interactive UI components.</li>
+                <li>Learning and implementing best practices in web development.</li>
+            </ul>
+        </div>
+        <div class="drupak">
+            
+            <h3>&#9679; Computer Science Student &nbsp;&nbsp;&nbsp;&nbsp; <span><p>[ Virtual University Pakistan ]</p></span> </h3>
+            <ul>
+                <li>Learning programming fundamentals with C++.</li>
+                <li>Exploring front-end and back-end development.</li>
+                <li>Building personal and academic projects to improve coding skills.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="services">
+        <h1>SERVICES</h1>
+        <div class="services-icons">
+            <div class="devolopment A">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40px" hieght="40px" viewBox="0 0 512 512"><path d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM96 96l320 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L96 160c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>
+                <h3>Front-End</h3>
+            </div>
+            <div class="devolopment B">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40px" hieght="40px" viewBox="0 0 576 512"><path d="M288 80c-65.2 0-118.8 29.6-159.9 67.7C89.6 183.5 63 226 49.4 256c13.6 30 40.2 72.5 78.6 108.3C169.2 402.4 222.8 432 288 432s118.8-29.6 159.9-67.7C486.4 328.5 513 286 526.6 256c-13.6-30-40.2-72.5-78.6-108.3C406.8 109.6 353.2 80 288 80zM95.4 112.6C142.5 68.8 207.2 32 288 32s145.5 36.8 192.6 80.6c46.8 43.5 78.1 95.4 93 131.1c3.3 7.9 3.3 16.7 0 24.6c-14.9 35.7-46.2 87.7-93 131.1C433.5 443.2 368.8 480 288 480s-145.5-36.8-192.6-80.6C48.6 356 17.3 304 2.5 268.3c-3.3-7.9-3.3-16.7 0-24.6C17.3 208 48.6 156 95.4 112.6zM288 336c44.2 0 80-35.8 80-80s-35.8-80-80-80c-.7 0-1.3 0-2 0c1.3 5.1 2 10.5 2 16c0 35.3-28.7 64-64 64c-5.5 0-10.9-.7-16-2c0 .7 0 1.3 0 2c0 44.2 35.8 80 80 80zm0-208a128 128 0 1 1 0 256 128 128 0 1 1 0-256z" /></svg></svg>
+                <h3>visualization</h3>
+            </div>
+            <div class="devolopment C">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40px" hieght="40px" viewBox="0 0 384 512"><path d="M14 95.8C14 42.9 56.9 0 109.8 0H274.2C327.1 0 370 42.9 370 95.8C370 129.3 352.8 158.8 326.7 175.9C352.8 193 370 222.5 370 256C370 308.9 327.1 351.8 274.2 351.8H272.1C247.3 351.8 224.7 342.4 207.7 326.9V415.2C207.7 468.8 163.7 512 110.3 512C57.5 512 14 469.2 14 416.2C14 382.7 31.2 353.2 57.2 336.1C31.2 319 14 289.5 14 256C14 222.5 31.2 193 57.2 175.9C31.2 158.8 14 129.3 14 95.8zM176.3 191.6H109.8C74.2 191.6 45.4 220.4 45.4 256C45.4 291.4 74 320.2 109.4 320.4C109.5 320.4 109.7 320.4 109.8 320.4H176.3V191.6zM207.7 256C207.7 291.6 236.5 320.4 272.1 320.4H274.2C309.7 320.4 338.6 291.6 338.6 256C338.6 220.4 309.7 191.6 274.2 191.6H272.1C236.5 191.6 207.7 220.4 207.7 256zM109.8 351.8C109.7 351.8 109.5 351.8 109.4 351.8C74 352 45.4 380.8 45.4 416.2C45.4 451.7 74.6 480.6 110.3 480.6C146.6 480.6 176.3 451.2 176.3 415.2V351.8H109.8zM109.8 31.4C74.2 31.4 45.4 60.2 45.4 95.8C45.4 131.4 74.2 160.2 109.8 160.2H176.3V31.4H109.8zM207.7 160.2H274.2C309.7 160.2 338.6 131.4 338.6 95.8C338.6 60.2 309.7 31.4 274.2 31.4H207.7V160.2z"/></svg>
+                <h3>Design Implementaion</h3>
+            </div>
+            <div class="devolopment D">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40px" hieght="40px" viewBox="0 0 384 512"><path d="M16 64C16 28.7 44.7 0 80 0L304 0c35.3 0 64 28.7 64 64l0 384c0 35.3-28.7 64-64 64L80 512c-35.3 0-64-28.7-64-64L16 64zM144 448c0 8.8 7.2 16 16 16l64 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-64 0c-8.8 0-16 7.2-16 16zM304 64L80 64l0 320 224 0 0-320z"/></svg>
+                <h3>Responsive Designs</h3>
+            </div>
+            <div class="devolopment E">
+                <svg xmlns="http://www.w3.org/2000/svg" hieght="40px" width="40px" viewBox="0 0 512 512"><path d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"/></svg>
+                <h3>SEO & Accessibility</h3>
+            </div>
+            <div class="devolopment F">
+                <svg xmlns="http://www.w3.org/2000/svg" hieght="30px" width="30px" viewBox="0 0 448 512"><path d="M349.4 44.6c5.9-13.7 1.5-29.7-10.6-38.5s-28.6-8-39.9 1.8l-256 224c-10 8.8-13.6 22.9-8.9 35.3S50.7 288 64 288l111.5 0L98.6 467.4c-5.9 13.7-1.5 29.7 10.6 38.5s28.6 8 39.9-1.8l256-224c10-8.8 13.6-22.9 8.9-35.3s-16.6-20.7-30-20.7l-111.5 0L349.4 44.6z"/></svg>
+                <h3>Performance Optimization</h3>
+            </div>
+        </div>
+    </div>
+    <div class="connect">
+        <h2>Lets work together</h2>
+        <div class="button">
+            <a href="contacts.html"><h3>Lets talk &#8594; </h3></a>
+        </div>
+    </div>
+    <div class="social">
+        <a  href="https://www.linkedin.com/in/hassan-ahmad-9a132b351/?trk=public-profile-badge-profile-badge-view-profile-cta&original_referer=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2F&originalSubdomain=pk" style="text-decoration: none;" ><div class="social-icon">
+            <h3>Linkedin</h3>
+            <div class="social-icon-image">
+                <img src="linkedin-logo.png" alt="">
+            </div>
+        </div></a>
+            <a href="https://www.instagram.com/hassanahmad132005?igsh=YTB2d2FheXpuMG1v&utm_source=qr" style="text-decoration: none;"><div class="social-icon">
+                <h3>Instagram</h3>
+                <div class="social-icon-image">
+                    <img src="instagram-logo.png" alt="">
+                </div>
+            </div></a>
+            <a href="https://www.youtube.com/@Animatecode_with_Hassan" style="text-decoration: none;"><div class="social-icon">
+                <h3>Youtube</h3>
+                <div class="social-icon-image">
+                    <img src="youtube-logo.png" alt="">
+                </div>
+            </div></a>
+            <a href="mailto:webcodecrafter1@gmail.com" style="text-decoration: none;"><div class="social-icon">
+                <h3>Mail</h3>
+                <div class="social-icon-image ">
+                    <img src="envelope.png" alt="">
+                </div>
+            </div></a>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-logo">
+        <div class="footer-logo-img">
+            <img src="logo.png" alt="">
+        </div>
+        <h3>Hassan</h3>
+        </div>
+        <P>&copy;  2025 Hassan. All rights reserved</P>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger");
+        const menu = document.querySelector(".menu");
+    
+        hamburger.classList.remove("active");
+        menu.classList.remove("show");
+    
+        hamburger.addEventListener("click", function () {
+            this.classList.toggle("active");
+            menu.classList.toggle("show");
+        });
+    });
+    
+    </script>
+    
+</body>
+</html>
