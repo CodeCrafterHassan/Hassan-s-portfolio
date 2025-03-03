@@ -617,7 +617,7 @@ to {
     display: grid;
     grid-gap: 30px;
     grid-template-columns:1fr 1fr 1fr ;
-    grid-template-rows:50dvh;
+    grid-template-rows:30%;
     }
 .about{
     grid-column: 1 / 2;
